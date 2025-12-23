@@ -1,0 +1,127 @@
+.session-tabs {
+  background: var(--bg-secondary);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 0 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tabs-container {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(33, 38, 45, 0.4);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab:hover {
+  background: rgba(31, 35, 40, 0.6);
+  transform: translateY(-1px);
+}
+
+.tab.active {
+  background: rgba(13, 17, 23, 0.7);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-color: var(--primary-color);
+  border-bottom: 1px solid rgba(13, 17, 23, 0.7);
+  margin-bottom: -1px;
+  box-shadow: 0 4px 16px rgba(88, 166, 255, 0.3);
+}
+
+.tab-name {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tab-rename-input {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-width: 100px;
+}
+
+.tab-actions {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.tab:hover .tab-actions {
+  opacity: 1;
+}
+
+.tab-action {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.tab-action:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.tab-delete:hover {
+  background: var(--error-bg);
+  color: var(--error-color);
+}
+
+.new-tab-button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.9) 0%, rgba(68, 147, 248, 0.9) 100%);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px 8px 0 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 4px;
+  box-shadow: 0 4px 16px rgba(88, 166, 255, 0.4);
+}
+
+.new-tab-button:hover {
+  background: linear-gradient(135deg, rgba(68, 147, 248, 0.95) 0%, rgba(88, 166, 255, 0.95) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(88, 166, 255, 0.5);
+}
+
