@@ -23,7 +23,7 @@ venv/
 env/
 ENV/
 .venv
-
+.env
 # Database
 *.db
 *.sqlite
